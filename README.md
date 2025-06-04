@@ -1,6 +1,5 @@
 <div align="center">
   <img src="https://drive.google.com/uc?export=download&id=11pMeTxjIPw8SvSPKTzXtWXkaPZ6yXgPz" alt="Accel" width="500">
-  <b><h4>Your first step for AI optimization.</h4></b>
   <h4>Hosted at <a href="https://accel.ruhangupta.com">accel.ruhangupta.com*</a></h4>
   <p>*There might be bugs! Accel is a work-in-progress. ⚠️</p>
 </div>
