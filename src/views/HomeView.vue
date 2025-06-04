@@ -5,13 +5,45 @@
       showInput ? 'justify-center' : 'space-y-6'
     ]"
   >
+    <div
+      v-if="showWhatIsAccel"
+      class="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-3xl">
+        <h2 class="text-xl font-semibold text-purple-500 mb-4">
+          What is Accel?
+        </h2>
+        <p class="text-gray-700 mb-4">
+          Accel is a platform that helps businesses optimize their operations using AI. Using the data from the Anthropic Economic Index, Accel provides insights and recommendations based on your business processes, helping businesses identify areas for improvement and automation with AI.
+          <br><br>
+          Accel was created with Google Cloud and MongoDB by <a
+            href="https://ruhangupta.com/"
+            class="text-purple-500 underline"
+          >Ruhan Gupta</a> for the AI in Action Hackathon. Check out the <a
+            href="https://devpost.com/software/accel-e4fvsn"
+            class="text-purple-500 underline"
+          >Devpost Submission</a>, and the <a
+            href="https://github.com/IMGROOT2/accel"
+            class="text-purple-500 underline"
+          >GitHub Repository</a>.
+        </p>
+        <button
+          class="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all duration-200"
+          @click="showWhatIsAccel = false"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+
+
     <transition name="fade">
       <div
         v-if="showInput"
         class="w-full max-w-3xl *:flex flex-col items-center bg-slate-50 p-8 rounded-lg shadow-lg space-y-6"
         style="border: 2px solid #e5e7eb;"
       >
-
         <p class="text-center mx-auto justify-center text-xs inline text-purple-500 font-bold relative top-12">
           <a
             href="https://ruhangupta.com/"
@@ -26,6 +58,12 @@
         <h1 class="text-xl text-purple-500 mb-4 text-center justify-center">
           Your first step for AI optimization.
         </h1>
+        <a
+          class="text-purple-500 cursor-pointer mx-auto justify-center text-center bg-purple-100 hover:bg-purple-200 px-4 py-2 rounded-lg shadow transition-all duration-200 flex items-center transition-all duration-200"
+          @click="showWhatIsAccel = !showWhatIsAccel"
+        >
+          <i class="fa-solid fa-circle-info mr-1" /> About Accel
+        </a>
         <textarea
           v-model="operations"
           placeholder="Conduct short interviews with your team members. With the Speech-to-Text API from Google Cloud, ask them to describe the day-to-day operations of your business. We'll analyze your response and recommend AI optimizations."
@@ -33,7 +71,7 @@
         />
         <div class="w-full flex justify-center">
           <button
-            class="p-6 py-5 bg-purple-500 rounded-full border-2 border-purple-300 hover:bg-purple-600 transition-colors flex items-center justify-center micbackground"
+            class="p-6 py-5 bg-purple-500 rounded-full border-2 border-purple-300 hover:bg-purple-600 flex items-center justify-center micbackground transition-all duration-200"
             @click="toggleSTT();"
           >
             <i
@@ -45,7 +83,7 @@
         <div class="flex justify-center mt-4">
           <button
             :disabled="loading"
-            class="px-6 py-2 font-semibold rounded-lg shadow bg-purple-500 text-white hover:bg-purple-600 disabled:opacity-50 flex items-center"
+            class="px-6 py-2 font-semibold rounded-lg shadow bg-purple-500 text-white hover:bg-purple-600 disabled:opacity-50 flex items-center transition-all duration-200"
             @click="analyzeOperations"
           >
             <span
@@ -149,7 +187,7 @@
         >
           <button
             :disabled="loading"
-            class="px-6 py-2 font-semibold rounded-lg shadow bg-purple-500 text-white hover:bg-purple-600 disabled:opacity-50 flex items-center"
+            class="px-6 py-2 font-semibold rounded-lg shadow bg-purple-500 text-white hover:bg-purple-600 disabled:opacity-50 flex items-center transition-all duration-200"
             @click="automateSteps"
           >
             <span
@@ -215,6 +253,7 @@ const showInput = ref(true);
 const showSteps = ref(true);
 const showExamples = ref(true);
 const showAutomation = ref(true);
+const showWhatIsAccel = ref(false);
 
 function reset() {
   operations.value = '';
