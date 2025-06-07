@@ -22,10 +22,7 @@
           >Ruhan Gupta</a> for the AI in Action Hackathon. Check out the <a
             href="https://devpost.com/software/accel-e4fvsn"
             class="text-purple-500 underline"
-          >Devpost Submission</a>, and the <a
-            href="https://github.com/IMGROOT2/accel"
-            class="text-purple-500 underline"
-          >GitHub Repository</a>.
+          >Devpost Submission</a>.
         </p>
         <button
           class="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all duration-200"
