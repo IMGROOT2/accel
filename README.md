@@ -21,10 +21,11 @@
 
 <h2>Tech Stack</h2>
 <ul>
-  <li><a href="https://cloud.google.com/speech-to-text">Google Cloud Speech-to-Text</a></li>
-  <li><a href="https://cloud.google.com/run">Google Cloud Run</a></li>
-  <li><a href="https://www.mongodb.com">MongoDB Atlas</a> for storing peer insights and dataset</li>
-  <li><a href="https://gemini.google/overview">Google Gemini</a> for generative parsing & recommendations</li>
+  <li><a href="https://firebase.google.com/products/hosting">Firebase Hosting, by Google Cloud</a> to host Accel</li>
+  <li><a href="https://cloud.google.com/speech-to-text">Google Cloud Speech-to-Text</a> for user input</li>
+  <li><a href="https://cloud.google.com/run">Google Cloud Run</a> for API requests</li>
+  <li><a href="https://www.mongodb.com">MongoDB Atlas</a> for storing peer-insights and dataset</li>
+  <li><a href="https://gemini.google/overview">Google Gemini</a> generative parsing & recommendations</li>
   <li><a href="https://nodejs.org">Node.js & Express</a> backend</li>
   <li><a href="https://socket.io">Socket.io</a> for real-time STT streaming</li>
   <li><a href="https://vuejs.org">Vue.js</a> + <a href="https://tailwindcss.com">TailwindCSS</a> frontend</li>
