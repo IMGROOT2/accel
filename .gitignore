@@ -36,3 +36,6 @@ coverage
 Dockerfile
 starry-minutia-459807-a2-a1df34eef147.json
 server.js
+
+.firebaserc
+.firebase/
